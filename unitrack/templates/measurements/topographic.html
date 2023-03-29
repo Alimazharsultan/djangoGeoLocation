@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Device Data
+{% endblock title %}
+
+{% block content %}
+<h1>Topographic View</h1>
+<a href="/"><button class="btn btn-primary">Points Covered</button></a>
+<a href="speed"><button class="btn btn-primary">Speed View</button></a>
+{{ map | safe}}
+<div class="color-group">
+    <h2>Color Scheme</h2>
+    <table>
+        <thead>
+            <tr class="color-table__row">
+                <th>Color</th>
+                <th>Elevation (meters)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th style="background-color: red;">___</th>
+                <th>550-545</th>
+            </tr>
+            <tr>
+                <th style="background-color: orange;">___</th>
+                <th>545-540</th>
+            </tr>
+            <tr>
+                <th style="background-color: blue;">___</th>
+                <th>540-530</th>
+            </tr>
+            <tr>
+                <th style="background-color: green;">___</th>
+                <th>530-520</th>
+            </tr>
+            <tr>
+                <th style="background-color: yellow;">___</th>
+                <th>520-0</th>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

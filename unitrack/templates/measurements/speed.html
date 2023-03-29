@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Device Data
+{% endblock title %}
+
+{% block content %}
+<h1>Speed View</h1>
+<a href="/"><button class="btn btn-primary">Points Covered</button></a>
+<a href="topographic"><button class="btn btn-primary">Topographic View</button></a>
+{{ map | safe}}
+
+{% endblock content %}

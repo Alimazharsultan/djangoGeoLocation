@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Device Data
+{% endblock title %}
+
+{% block content %}
+<h3>Points Covered</h3>
+<h1>{{usman}}</h1>
+<a href="speed"><button class="btn btn-primary">Speed View</button></a>
+<a href="topographic"><button class="btn btn-primary">Topographic View</button></a>
+{{ map | safe}}
+
+
+<form action="" method="POST" autocomplete="off">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>
+<br/>
+
+{% endblock content %}
